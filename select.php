@@ -103,10 +103,9 @@ if ($status3 == false) {
         $list1 .= '<ul id="menu01' . $loop_count . '" class="collapse sortable1 draggable1"" data-parent="#accordion_menu01">';
         while ($result333 = $stmt333->fetch(PDO::FETCH_ASSOC)) {
           $list1 .= '<li class="list-group-item">';
-          $list1 .= '<a href="' . $result333['url'] . '">';
-          $list1 .= '<p>' . '<a href="' . $result333['url'] . '" target="_blank" >' . '       ' . $result333['name'] . '</a>'  . '</p>';
+          // $list1 .= '<a href="' . $result333['url'] . '">';
+          $list1 .= '<p><a href="delete.php?id=' . $result333['id'] . '"><i class="far fa-times-circle"></i></a>' . '<a href="' . $result333['url'] . '" target="_blank" >' . '       ' . $result333['name'] . '</a>'  . '</p>';
           $list1 .= '<a href="detail.php?id=' . $result333['id'] . '" class="badge badge-primary">Edit</a>';
-          $list1 .= '<a href="delete.php?id=' . $result333['id'] . '" class="badge badge-danger">Delete</a>';
           // . '-' . $result3['comment']
           $list1 .= '</li>';
         }
@@ -116,10 +115,10 @@ if ($status3 == false) {
       continue; //以降の処理をスキップする。
     }
     $list1 .= '<li class="list-group-item">';
-    $list1 .= '<a href="' . $result3['url'] . '">';
-    $list1 .= '<p>' . '<a href="' . $result3['url'] . '" target="_blank" >' . $result3['name'] . '</a>'  . '</p>';
+    // $list1 .= '<a href="' . $result3['url'] . '">';
+    $list1 .= '<p><a href="delete.php?id=' . $result3['id'] . '"><i class="far fa-times-circle"></i></a>' . '<a href="' . $result3['url'] . '" target="_blank" >' . $result3['name'] . '</a>'  . '</p>';
     $list1 .= '<a href="detail.php?id=' . $result3['id'] . '" class="badge badge-primary">Edit</a>';
-    $list1 .= '<a href="delete.php?id=' . $result3['id'] . '" class="badge badge-danger">Delete</a>';
+    // $list1 .= '<a href="delete.php?id=' . $result3['id'] . '" class="badge badge-danger">Delete</a>';
     // . '-' . $result3['comment']
     $list1 .= '</li>';
   }
@@ -166,10 +165,10 @@ if ($status31 == false) {
         $list11 .= '<ul id="menu11' . $loop_count1 . '" class="collapse sortable1 draggable1"" data-parent="#accordion_menu02">';
         while ($result444 = $stmt444->fetch(PDO::FETCH_ASSOC)) {
           $list11 .= '<li class="list-group-item">';
-          $list11 .= '<a href="' . $result444['url'] . '">';
-          $list11 .= '<p>' . '<a href="' . $result444['url'] . '" target="_blank" >' . '       ' . $result444['name'] . '</a>'  . '</p>';
+          // $list11 .= '<a href="' . $result444['url'] . '">';
+          $list11 .= '<p><a href="delete.php?id=' . $result444['id'] . '"><i class="far fa-times-circle"></i></a>' . '<a href="' . $result444['url'] . '" target="_blank" >' . '       ' . $result444['name'] . '</a>'  . '</p>';
           $list11 .= '<a href="detail.php?id=' . $result444['id'] . '" class="badge badge-primary">Edit</a>';
-          $list11 .= '<a href="delete.php?id=' . $result444['id'] . '" class="badge badge-danger">Delete</a>';
+          // $list11 .= '<a href="delete.php?id=' . $result444['id'] . '" class="badge badge-danger">Delete</a>';
           // . '-' . $result3['comment']
           $list11 .= '</li>';
         }
@@ -179,10 +178,10 @@ if ($status31 == false) {
       continue; //以降の処理をスキップする。
     }
     $list11 .= '<li class="list-group-item">';
-    $list11 .= '<a href="' . $result31['url'] . '">';
-    $list11 .= '<p>' . '<a href="' . $result31['url'] . '" target="_blank" >' . $result31['name'] . '</a>'  . '</p>';
+    // $list11 .= '<a href="' . $result31['url'] . '">';
+    $list11 .= '<p><a href="delete.php?id=' . $result31['id'] . '"><i class="far fa-times-circle"></i></a>' . '<a href="' . $result31['url'] . '" target="_blank" >' . $result31['name'] . '</a>'  . '</p>';
     $list11 .= '<a href="detail.php?id=' . $result31['id'] . '" class="badge badge-primary">Edit</a>';
-    $list11 .= '<a href="delete.php?id=' . $result31['id'] . '" class="badge badge-danger">Delete</a>';
+    // $list11 .= '<a href="delete.php?id=' . $result31['id'] . '" class="badge badge-danger">Delete</a>';
     // . '-' . $result3['comment']
     $list11 .= '</li>';
   }
@@ -227,11 +226,10 @@ if ($status32 == false) {
         //http://php.net/manual/ja/pdostatement.fetch.php
         $list12 .= '<ul id="menu21' . $loop_count2 . '" class="collapse sortable1 draggable1"" data-parent="#accordion_menu03">';
         while ($result555 = $stmt555->fetch(PDO::FETCH_ASSOC)) {
-          $list12 .= '<li class="list-group-item">';
-          $list12 .= '<a href="' . $result555['url'] . '">';
-          $list12 .= '<p>' . '<a href="' . $result555['url'] . '" target="_blank" >' . '       ' . $result555['name'] . '</a>'  . '</p>';
+          $list12 .= '<li class="list-group-item flex_man">';
+          // $list12 .= '<a href="' . $result555['url'] . '">';
+          $list12 .= '<p><a href="delete.php?id=' . $result555['id'] . '"><i class="far fa-times-circle"></i></a>' . '<a href="' . $result555['url'] . '" target="_blank" >' . '       ' . $result555['name'] . '</a>'  . '</p>';
           $list12 .= '<a href="detail.php?id=' . $result555['id'] . '" class="badge badge-primary">Edit</a>';
-          $list12 .= '<a href="delete.php?id=' . $result555['id'] . '" class="badge badge-danger">Delete</a>';
           // . '-' . $result3['comment']
           $list12 .= '</li>';
         }
@@ -242,10 +240,10 @@ if ($status32 == false) {
       continue; //以降の処理をスキップする。
     }
     $list12 .= '<li class="list-group-item">';
-    $list12 .= '<a href="' . $result32['url'] . '">';
-    $list12 .= '<p>' . '<a href="' . $result32['url'] . '" target="_blank" >' . $result32['name'] . '</a>'  . '</p>';
+    // $list12 .= '<a href="' . $result32['url'] . '">';
+    $list12 .= '<p><a href="delete.php?id=' . $result32['id'] . '"><i class="far fa-times-circle"></i></a>' . '<a href="' . $result32['url'] . '" target="_blank" >' . $result32['name'] . '</a>'  . '</p>';
     $list12 .= '<a href="detail.php?id=' . $result32['id'] . '" class="badge badge-primary">Edit</a>';
-    $list12 .= '<a href="delete.php?id=' . $result32['id'] . '" class="badge badge-danger">Delete</a>';
+    // $list12 .= '<a href="delete.php?id=' . $result32['id'] . '" class="badge badge-danger">Delete</a>';
     // . '-' . $result3['comment']
     $list12 .= '</li>';
   }
@@ -264,7 +262,7 @@ if ($status32 == false) {
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>todoリスト表示</title>
+  <title>お気に入り漫画一覧</title>
   <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
   <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
@@ -285,7 +283,7 @@ if ($status32 == false) {
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">todo一覧</a>
+      <a class="navbar-brand" href="#">お気に入り漫画一覧</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -315,7 +313,12 @@ if ($status32 == false) {
           <button type="submit" class="btn btn-primary">追加</button>
         </form>
       </div>
-
+      <div id="delete_button" class="btn-danger">
+        削除モード
+      </div>
+      <div id="delete_button_back" class="btn-success">
+        削除モード解除
+      </div>
       <div id="reload">
         <div class="reload">
           <h3>殿堂入り</h3>
@@ -338,7 +341,19 @@ if ($status32 == false) {
 
   </div>
   </div>
+  <script>
+    $("#delete_button").on("click", function() {
+      $(".fa-times-circle").css("display", "inline-block");
+      $("#delete_button_back").css("display", "inline-block");
+      $("#delete_button").css("display", "none");
+    });
+    $("#delete_button_back").on("click", function() {
+      $(".fa-times-circle").css("display", "none");
+      $("#delete_button").css("display", "inline-block");
+      $("#delete_button_back").css("display", "none");
 
+    });
+  </script>
 </body>
 
 </html>

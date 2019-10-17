@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- ホスト: localhost
--- 生成日時: 2019 年 10 月 17 日 13:44
+-- 生成日時: 2019 年 10 月 17 日 15:49
 -- サーバのバージョン： 10.4.6-MariaDB
 -- PHP のバージョン: 7.3.9
 
@@ -72,7 +72,6 @@ INSERT INTO `gs_bm_table` (`id`, `name`, `url`, `comment`, `indate`, `genre`, `p
 (29, 'こんどこそ', 'https://www.youtube.com/watch?v=Id2a2gbW1Zs', '学園', '2019-10-16 00:56:50', 'ホラー', '完結済み', NULL, NULL),
 (30, 'できたけどphpでは？', 'https://www.youtube.com/watch?v=Id2a2gbW1Zs', 'ああああ', '2019-10-16 00:59:01', 'ラブコメ', '殿堂入り', 'ホラー', NULL),
 (31, 'かんけｔ', 'https://www.youtube.com/watch?v=Id2a2gbW1Zs', 'ああああああくそそ', '2019-10-16 01:00:17', 'ラブコメ', '完結済み', '買ってもいいかな', NULL),
-(32, 'gsacadおおお', 'https://www.youtube.com/watch?v=Id2a2gbW1Zs', 'ざああおｐ', '2019-10-16 01:14:42', 'ホラー', '殿堂入り', 'ホラー', NULL),
 (33, '柿木　優希', 'https://www.youtube.com/watch?v=Id2a2gbW1Zs', 'ｋｐｊっｐ', '2019-10-16 01:15:25', 'ラブコメ', '完結済み', '買ってもいいかな', NULL);
 
 -- --------------------------------------------------------
@@ -123,7 +122,8 @@ CREATE TABLE `user_table` (
 --
 
 INSERT INTO `user_table` (`id`, `name`, `lid`, `lpw`, `kanri_flg`, `life_flg`) VALUES
-(1, '林田　隆成', 'nikukyuhahaha', 'oshiemasen', 1, 1);
+(1, '林田　隆成', 'nikukyuhahaha', 'oshiemasen', 1, 1),
+(2, 'にくきゅうははは', 'nikukyuhahaha111', 'oshiemasenyo', 1, 0);
 
 --
 -- ダンプしたテーブルのインデックス
@@ -167,7 +167,7 @@ ALTER TABLE `php02_table`
 -- テーブルのAUTO_INCREMENT `user_table`
 --
 ALTER TABLE `user_table`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

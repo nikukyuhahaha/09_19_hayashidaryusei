@@ -110,17 +110,17 @@ switch ($rs['parent']) {
 
       <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="#">todo更新</a>
+          <a class="navbar-brand" href="#">漫画情報更新</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="index.php">todo登録</a>
+                <a class="nav-link" href="index.php">お気に入り漫画登録</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="select.php">todo一覧</a>
+                <a class="nav-link" href="select.php">お気に入り漫画一覧</a>
               </li>
             </ul>
           </div>

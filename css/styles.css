@@ -78,3 +78,17 @@ ul,li{
 .reload {
   width: 30%;
 }
+
+.fa-times-circle {
+    color: rgb(221, 41, 41);
+    display: none;
+}
+
+#delete_button_back {
+    display: none;
+}
+
+.btn-success .btn-danger{
+    width: 120px !;
+    border-radius: 5px;
+}

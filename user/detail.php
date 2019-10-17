@@ -102,17 +102,17 @@ switch ($rs['life_flg']) {
         </div>
         <div class=" form-group">
           <label for="lpw">パスワード</label>
-          <input type="text" class="form-control" id="lpw" name="lpw" placeholder="パスワード" value="<?= $rs['lpw'] ?>">
+          <input type="password" class="form-control" id="lpw" name="lpw" placeholder="パスワード" value="<?= $rs['lpw'] ?>">
         </div>
         <div class=" form-group">
           <label for="kanri_flg">管理フラグ</label>
-          <input type="hidden" name="cur_kanri_flg" value="<?= $rs['kanri_flg'] ?>">
+          <!-- <input type="hidden" name="cur_kanri_flg" value="<?= $rs['kanri_flg'] ?>"> -->
           <input type="radio" name="kanri_flg" value=0 <?= $checked0 ?> />一般
           <input type="radio" name="kanri_flg" value=1 <?= $checked1 ?> />管理者
         </div>
         <div class="form-group">
           <label for="life_flg">アクティブフラグ</label>
-          <input type="hidden" name="cur_shift" value="<?= $rs['life_flg'] ?>">
+          <!-- <input type="hidden" name="cur_shift" value="<?= $rs['life_flg'] ?>"> -->
           <input type="radio" name="life_flg" value=0 <?= $checked00 ?> />アクセス
           <input type="radio" name="life_flg" value=1 <?= $checked11 ?> />非アクティブ
         </div>
