@@ -85,7 +85,7 @@ switch ($rs['parent']) {
     $selected2 = 'selected';
     break;
 }
-
+// あいう
 ?>
 
 
