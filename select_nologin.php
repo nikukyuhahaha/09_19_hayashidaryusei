@@ -1,14 +1,14 @@
 <?php
 // セッションのスタート
-session_start();
+// session_start();
 
 //0.外部ファイル読み込み
 include('functions.php');
 
 // ログイン状態のチェック
-checkSessionId();
+// checkSessionId();
 
-$menu = menu();
+// $menu = menu();
 
 
 //1. DB接続
@@ -80,12 +80,12 @@ if ($status3 == false) {
 } else {
   //Selectデータの数だけ自動でループしてくれる
   //http://php.net/manual/ja/pdostatement.fetch.php
-  $list1 .= '<ul id="accordion_menu01" class="sortable draggable">';
+  $list1 .= '<ul id="accordion_menu01" class=" ">';
   $loop_count = 0;
   while ($result3 = $stmt3->fetch(PDO::FETCH_ASSOC)) {
     if ($result3['url'] == "a") { //urlがaのときに実施される
       // $loop_count .= 1;
-      $list1 .= '<li class="list-group-item folder  droppable  child_folder"><a data-toggle="collapse" href="#menu01' . $loop_count . '" aria-controls="#menu01" aria-expanded="false">';
+      $list1 .= '<li class="list-group-item folder    child_folder"><a data-toggle="collapse" href="#menu01' . $loop_count . '" aria-controls="#menu01" aria-expanded="false">';
       $list1 .= '<i class="far fa-folder-open"></i>' . $result3['child1'];
       $list1 .= '</a></li>';
       // $list1 .= '<div>';
@@ -103,12 +103,12 @@ if ($status3 == false) {
         //Selectデータの数だけ自動でループしてくれる
         //http://php.net/manual/ja/pdostatement.fetch.php
         // $list1 .= '<ul id="imoko">';
-        $list1 .= '<ul id="menu01' . $loop_count . '" class="collapse sortable draggable"" data-parent="#accordion_menu01">';
+        $list1 .= '<ul id="menu01' . $loop_count . '" class="collapse  "" data-parent="#accordion_menu01">';
         while ($result333 = $stmt333->fetch(PDO::FETCH_ASSOC)) {
           $list1 .= '<li class="list-group-item">';
           // $list1 .= '<a href="' . $result333['url'] . '">';
           $list1 .= '<p><a href="delete.php?id=' . $result333['id'] . '"><i class="far fa-times-circle"></i></a>' . '<a href="' . $result333['url'] . '" target="_blank" >' . '       ' . $result333['name'] . '</a>'  . '</p>';
-          $list1 .= '<a href="detail.php?id=' . $result333['id'] . '" class="badge badge-primary">Edit</a>';
+          $list1 .= '<a href="detail_nologin.php?id=' . $result333['id'] . '" class="badge badge-primary">Edit</a>';
           // . '-' . $result3['comment']
           $list1 .= '</li>';
         }
@@ -120,7 +120,7 @@ if ($status3 == false) {
     $list1 .= '<li class="list-group-item">';
     // $list1 .= '<a href="' . $result3['url'] . '">';
     $list1 .= '<p><a href="delete.php?id=' . $result3['id'] . '"><i class="far fa-times-circle"></i></a>' . '<a href="' . $result3['url'] . '" target="_blank" >' . $result3['name'] . '</a>'  . '</p>';
-    $list1 .= '<a href="detail.php?id=' . $result3['id'] . '" class="badge badge-primary">Edit</a>';
+    $list1 .= '<a href="detail_nologin.php?id=' . $result3['id'] . '" class="badge badge-primary">Edit</a>';
     // $list1 .= '<a href="delete.php?id=' . $result3['id'] . '" class="badge badge-danger">Delete</a>';
     // . '-' . $result3['comment']
     $list1 .= '</li>';
@@ -143,12 +143,12 @@ if ($status31 == false) {
 } else {
   //Selectデータの数だけ自動でループしてくれる
   //http://php.net/manual/ja/pdostatement.fetch.php
-  $list11 .= '<ul id="accordion_menu02" class="sortable draggable">';
+  $list11 .= '<ul id="accordion_menu02" class=" ">';
   $loop_count1 = 0;
   while ($result31 = $stmt31->fetch(PDO::FETCH_ASSOC)) {
     if ($result31['url'] == "a") { //urlがaのときに実施される
       // $loop_count1 .= 1;
-      $list11 .= '<li class="list-group-item folder  droppable  child_folder"><a data-toggle="collapse" href="#menu11' . $loop_count1 . '" aria-controls="#menu11" aria-expanded="false">';
+      $list11 .= '<li class="list-group-item folder    child_folder"><a data-toggle="collapse" href="#menu11' . $loop_count1 . '" aria-controls="#menu11" aria-expanded="false">';
       $list11 .= '<i class="far fa-folder-open"></i>' . $result31['child1'];
       $list11 .= '</a></li>';
 
@@ -164,13 +164,13 @@ if ($status31 == false) {
       } else {
         //Selectデータの数だけ自動でループしてくれる
         //http://php.net/manual/ja/pdostatement.fetch.php
-        // $list11 .= '<ul id="imoko" class="sortable draggable">';
-        $list11 .= '<ul id="menu11' . $loop_count1 . '" class="collapse sortable draggable"" data-parent="#accordion_menu02">';
+        // $list11 .= '<ul id="imoko" class=" ">';
+        $list11 .= '<ul id="menu11' . $loop_count1 . '" class="collapse  "" data-parent="#accordion_menu02">';
         while ($result444 = $stmt444->fetch(PDO::FETCH_ASSOC)) {
           $list11 .= '<li class="list-group-item">';
           // $list11 .= '<a href="' . $result444['url'] . '">';
           $list11 .= '<p><a href="delete.php?id=' . $result444['id'] . '"><i class="far fa-times-circle"></i></a>' . '<a href="' . $result444['url'] . '" target="_blank" >' . '       ' . $result444['name'] . '</a>'  . '</p>';
-          $list11 .= '<a href="detail.php?id=' . $result444['id'] . '" class="badge badge-primary">Edit</a>';
+          $list11 .= '<a href="detail_nologin.php?id=' . $result444['id'] . '" class="badge badge-primary">Edit</a>';
           // $list11 .= '<a href="delete.php?id=' . $result444['id'] . '" class="badge badge-danger">Delete</a>';
           // . '-' . $result3['comment']
           $list11 .= '</li>';
@@ -183,7 +183,7 @@ if ($status31 == false) {
     $list11 .= '<li class="list-group-item">';
     // $list11 .= '<a href="' . $result31['url'] . '">';
     $list11 .= '<p><a href="delete.php?id=' . $result31['id'] . '"><i class="far fa-times-circle"></i></a>' . '<a href="' . $result31['url'] . '" target="_blank" >' . $result31['name'] . '</a>'  . '</p>';
-    $list11 .= '<a href="detail.php?id=' . $result31['id'] . '" class="badge badge-primary">Edit</a>';
+    $list11 .= '<a href="detail_nologin.php?id=' . $result31['id'] . '" class="badge badge-primary">Edit</a>';
     // $list11 .= '<a href="delete.php?id=' . $result31['id'] . '" class="badge badge-danger">Delete</a>';
     // . '-' . $result3['comment']
     $list11 .= '</li>';
@@ -207,11 +207,11 @@ if ($status32 == false) {
 } else {
   //Selectデータの数だけ自動でループしてくれる
   //http://php.net/manual/ja/pdostatement.fetch.php
-  $list12 .= '<ul id="accordion_menu03" class="sortable draggable">';
+  $list12 .= '<ul id="accordion_menu03" class=" ">';
   $loop_count2 = 0;
   while ($result32 = $stmt32->fetch(PDO::FETCH_ASSOC)) {
     if ($result32['url'] == "a") { //urlがaのときに実施される
-      $list12 .= '<li class="list-group-item folder  droppable  child_folder"><a data-toggle="collapse" href="#menu21' . $loop_count2 . '" aria-controls="#menu21" aria-expanded="false">';
+      $list12 .= '<li class="list-group-item folder    child_folder"><a data-toggle="collapse" href="#menu21' . $loop_count2 . '" aria-controls="#menu21" aria-expanded="false">';
       $list12 .=  '<i class="far fa-folder-open"></i>' . $result32['child1'];
       $list12 .= '</a></li>';
 
@@ -227,12 +227,12 @@ if ($status32 == false) {
       } else {
         //Selectデータの数だけ自動でループしてくれる
         //http://php.net/manual/ja/pdostatement.fetch.php
-        $list12 .= '<ul id="menu21' . $loop_count2 . '" class="collapse sortable draggable"" data-parent="#accordion_menu03">';
+        $list12 .= '<ul id="menu21' . $loop_count2 . '" class="collapse  "" data-parent="#accordion_menu03">';
         while ($result555 = $stmt555->fetch(PDO::FETCH_ASSOC)) {
           $list12 .= '<li class="list-group-item flex_man">';
           // $list12 .= '<a href="' . $result555['url'] . '">';
           $list12 .= '<p><a href="delete.php?id=' . $result555['id'] . '"><i class="far fa-times-circle"></i></a>' . '<a href="' . $result555['url'] . '" target="_blank" >' . '       ' . $result555['name'] . '</a>'  . '</p>';
-          $list12 .= '<a href="detail.php?id=' . $result555['id'] . '" class="badge badge-primary">Edit</a>';
+          $list12 .= '<a href="detail_nologin.php?id=' . $result555['id'] . '" class="badge badge-primary">Edit</a>';
           // . '-' . $result3['comment']
           $list12 .= '</li>';
         }
@@ -245,7 +245,7 @@ if ($status32 == false) {
     $list12 .= '<li class="list-group-item">';
     // $list12 .= '<a href="' . $result32['url'] . '">';
     $list12 .= '<p><a href="delete.php?id=' . $result32['id'] . '"><i class="far fa-times-circle"></i></a>' . '<a href="' . $result32['url'] . '" target="_blank" >' . $result32['name'] . '</a>'  . '</p>';
-    $list12 .= '<a href="detail.php?id=' . $result32['id'] . '" class="badge badge-primary">Edit</a>';
+    $list12 .= '<a href="detail_nologin.php?id=' . $result32['id'] . '" class="badge badge-primary">Edit</a>';
     // $list12 .= '<a href="delete.php?id=' . $result32['id'] . '" class="badge badge-danger">Delete</a>';
     // . '-' . $result3['comment']
     $list12 .= '</li>';
@@ -292,7 +292,12 @@ if ($status32 == false) {
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <?= $menu ?>
+          <li class="nav-item">
+            <a class="nav-link" href="login.php">ログイン</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="select_nologin.php">お気に入り漫画一覧</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -304,7 +309,7 @@ if ($status32 == false) {
       <!-- <h3>すべて見る</h3>
       <?= $view ?> -->
 
-      <div>
+      <!-- <div>
         <form action="insert_child.php" method="post">
           <div class="select_parent">
             <div>フォルダ作成</div>
@@ -313,13 +318,13 @@ if ($status32 == false) {
           <input type="text" name="child1">
           <button type="submit" class="btn btn-primary">追加</button>
         </form>
-      </div>
-      <div id="delete_button" class="btn-danger">
+      </div> -->
+      <!-- <div id="delete_button" class="btn-danger">
         削除モード
       </div>
       <div id="delete_button_back" class="btn-success">
         削除モード解除
-      </div>
+      </div> -->
       <div id="reload">
         <div class="reload">
           <h3>殿堂入り</h3>

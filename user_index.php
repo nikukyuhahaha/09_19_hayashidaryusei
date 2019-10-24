@@ -1,3 +1,11 @@
+<?php
+//必ずsession_startは最初に記述
+session_start();
+//1. DB接続
+include('functions.php'); //function.php に置いている関数をこの２行で呼び出す
+$menu = menu();
+checkSessionId();
+?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -25,18 +33,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php">ユーザー登録</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="select.php">ユーザー一覧</a>
-                    </li>
+                    <?= $menu ?>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <form method="post" action="insert.php">
+    <form method="post" action="user_insert.php">
         <div class="form-group">
             <label for="name">ユーザー名</label>
             <input type="text" class="form-control" id="name" name="name" placeholder="ユーザー名">

@@ -1,0 +1,198 @@
+/* header {
+  background-color: rgb(34, 114, 219);
+  color: #fff;
+  margin: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} */
+
+header > h2 {
+    margin: 0;
+    font-size: 32px;
+    padding: 0 0 0 40px;
+}
+
+.h_right{
+  font-size: 22px;
+  padding: 0 40px 0 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  margin: 0 0 0 0;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+h3{
+  font-size: 20px;
+  font-weight: normal;
+}
+ul {
+  list-style: none;
+}
+
+li {
+  line-height: 2;
+}
+
+input[type="text"]{
+  padding: 6px 8px;
+  font-size: 14px;
+  width: 300px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+/* top（ログインページ) */
+
+#top_box{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+#top_background{
+  width: 58%;
+  /* height: 100%; */
+  background: url(../img/81744.jpg);
+  background-size: cover;
+}
+
+#staba{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+#yatta{
+  color: rgba(182, 41, 41, 0.671);
+  font-size: 50px;
+  position: relative;
+  top:280px;
+  left: 210px;
+}
+
+#sub_yatta{
+  color: rgba(182, 41, 41, 0.671);
+  font-size: 20px;
+  position: relative;
+  top:0px;
+  left: 100px;
+}
+
+#login_box{
+  width: 42%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(227, 224, 235, 0.363);
+}
+
+#concept{
+  color: black;
+  font-size: 20px;
+  padding: 0 0 50px 0;
+}
+
+#logout{
+  border: solid rgb(34, 114, 219) 1px;
+  padding: 6px 10px;
+border-radius: 10px;
+color: rgb(34, 114, 219);
+background-color: white;
+cursor: pointer;
+  display: inline-block;
+/* box-shadow: 2px 2px rgb(230, 230, 230); */
+  transition: all 0.3s ease 0s;
+}
+
+#logout:hover {
+  border-bottom-color: transparent;
+  transform: translateY(0.0975em);
+}
+
+.order_concept{
+  text-align: center;
+}
+
+
+.ui-state-default{
+  height: 150px;
+  width: 47%;
+  color: #fff;
+  font-size: 28px;
+  border: solid #fff 1px;
+  border-radius: 20px;
+  background-color: rgb(8, 189, 128);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 5px;
+  transition: all 0.6s ease 0s;
+}
+.ui-state-default:hover{
+  cursor: pointer;
+  opacity: 0.6;
+  transform: scale(1.06, 1.06);
+
+}
+
+#folder_list{
+  display: flex;
+  flex-wrap: wrap;
+  width: 83%;
+}
+
+#list_box{
+  display: flex;
+  justify-content: center;
+}
+
+.anime {
+ width: 100vw;
+ height: 100vh;
+ background-color: #ffffff;
+ position: relative;
+}
+  
+.anime img {
+ display: block;
+ width: auto;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+ -moz-transform: translate(-50%,-50%);
+ -ms-transform: translate(-50%,-50%);
+ -o-transform: translate(-50%,-50%);
+ transform: translate(-50%,-50%);
+}
+
+nav {
+  z-index: 100;
+  background-color: rgba(207, 208, 226, 0.692) !important;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  color: #fff !important;
+  width: 100%;
+}
+
+.submit_box {
+  display: flex;
+  justify-content: center;
+}
+
+.form-group {
+  font-size: 14px;
+}

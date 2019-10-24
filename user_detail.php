@@ -1,7 +1,11 @@
 <?php
+//必ずsession_startは最初に記述
+session_start();
+
 // 関数ファイルの読み込み
 include('functions.php'); //function.php に置いている関数を呼び出す
-
+$menu = menu();
+checkSessionId();
 // getで送信されたidを取得
 $id = $_GET['id']; //送られてきたid番号
 
@@ -80,18 +84,13 @@ switch ($rs['life_flg']) {
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="index.php">ユーザー登録</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="select.php">ユーザー一覧</a>
-              </li>
+              <?= $menu ?>
             </ul>
           </div>
         </nav>
       </header>
 
-      <form method="post" action="update.php">
+      <form method="post" action="user_update.php">
         <div class="form-group">
           <label for="name">ユーザー名</label>
           <input type="text" class="form-control" id="name" name="name" placeholder="ユーザー名" value="<?= $rs['name'] ?>">

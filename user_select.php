@@ -1,7 +1,12 @@
 <?php
+//必ずsession_startは最初に記述
+session_start();
+
 //1. DB接続
 include('functions.php'); //function.php に置いている関数をこの２行で呼び出す
+$menu = menu();
 $pdo = connectToDb();
+checkSessionId();
 
 // ↓ 下の処理はfunction.phpに関数として置いておく
 
@@ -32,8 +37,8 @@ if ($status == false) {
   //http://php.net/manual/ja/pdostatement.fetch.php
   while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $view .= '<li class="list-group-item">';
-    $view .= '<a href="detail.php?id=' . $result['id'] . '" class="badge badge-primary">Edit</a>';
-    $view .= '<a href="delete.php?id=' . $result['id'] . '" class="badge badge-danger">Delete</a>';
+    $view .= '<a href="user_detail.php?id=' . $result['id'] . '" class="badge badge-primary">Edit</a>';
+    $view .= '<a href="user_delete.php?id=' . $result['id'] . '" class="badge badge-danger">Delete</a>';
     $view .= '<p>' . $result['name'] . '-' . $result['lid'] . '</p>';
     $view .= '</li>';
   }
@@ -68,12 +73,7 @@ if ($status == false) {
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="index.php">ユーザー登録</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="select.php">ユーザー一覧</a>
-          </li>
+          <?= $menu ?>
         </ul>
       </div>
     </nav>

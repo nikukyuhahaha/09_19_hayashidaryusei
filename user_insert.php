@@ -38,5 +38,5 @@ if ($status == false) {
   exit('sqlError:' . $error[2]);
 } else {
   //index.phpへリダイレクト
-  header('Location: index.php');
+  header('Location: user_index.php');
 }

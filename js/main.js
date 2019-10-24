@@ -10,12 +10,11 @@ $(function () {
     revert: 'invalid',
   });
 
-
   $(".droppable").droppable({
     tolerance: "intersect",
     drop: function (event, ui) {
 
-      var postData = { "move_info": ui.draggable.text(), "get_info": $(this).text() };
+      var postData = { "move_info": ui.draggable.text().replace('Edit', ''), "get_info": $(this).text() };
       $.post(
         "ajax_getData.php",
         postData,
@@ -24,7 +23,7 @@ $(function () {
         //   alert(data); //結果をアラートで表示
         // }
       );
-      console.log(ui.draggable.text());
+      console.log(ui.draggable.text().replace('Edit', ''));
       console.log($(this).text());
 
       // ui.draggable.fadeOut(1000);
@@ -134,40 +133,40 @@ $(function () {
 }
 );
 
-$(function () {
-  $(".sortable1").sortable({
-    revert: true
-  });
-  $(".draggable1").draggable({
-    connectToSortable: '.sortable1',
-    // helper: 'clone',
-    revert: 'invalid',
-  });
+// $(function () {
+//   $(".sortable1").sortable({
+//     revert: true
+//   });
+//   $(".draggable1").draggable({
+//     connectToSortable: '.sortable1',
+//     // helper: 'clone',
+//     revert: 'invalid',
+//   });
 
 
-  $(".droppable1").droppable({
-    tolerance: "intersect",
-    drop: function (event, ui) {
+//   $(".droppable1").droppable({
+//     tolerance: "intersect",
+//     drop: function (event, ui) {
 
-      var postData = { "move_info": ui.draggable.text(), "get_info": $(this).text() };
-      $.post(
-        "ajax_getData.php",
-        postData,
-        // エラーチェックで結構使えるこいつ
-        // function (data) {
-        //   alert(data); //結果をアラートで表示
-        // }
-      );
-      console.log(ui.draggable.text());
-      console.log($(this).text());
+//       var postData = { "move_info": ui.draggable.text(), "get_info": $(this).text() };
+//       $.post(
+//         "ajax_getData.php",
+//         postData,
+//         // エラーチェックで結構使えるこいつ
+//         // function (data) {
+//         //   alert(data); //結果をアラートで表示
+//         // }
+//       );
+//       console.log(ui.draggable.text());
+//       console.log($(this).text());
 
-      // ui.draggable.fadeOut(1000);
-      window.location.reload();
-    }
-  }
-  );
-}
-);
+//       // ui.draggable.fadeOut(1000);
+//       // window.location.reload();
+//     }
+//   }
+//   );
+// }
+// );
 
 
 

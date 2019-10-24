@@ -19,6 +19,6 @@ if ($status == false) {
   showSqlErrorMsg($stmt);
 } else {
   //select.phpへリダイレクト
-  header('Location: select.php');
+  header('Location: user_select.php');
   exit;
 }

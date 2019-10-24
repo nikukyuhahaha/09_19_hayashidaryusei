@@ -1,5 +1,14 @@
 <?php
+// セッションのスタート
+session_start();
 
+//0.外部ファイル読み込み
+include('functions.php');
+
+// ログイン状態のチェック
+checkSessionId();
+
+$menu = menu();
 
 ?>
 
@@ -30,9 +39,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="select.php">データ一覧</a>
-          </li>
+          <?= $menu ?>
         </ul>
       </div>
     </nav>

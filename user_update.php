@@ -41,6 +41,6 @@ $status = $stmt->execute();
 if ($status == false) {
   showSqlErrorMsg($stmt);
 } else {
-  header('Location: select.php'); //ここに戻る
+  header('Location: user_select.php'); //ここに戻る
   exit;
 }

@@ -1,8 +1,6 @@
 <?php
 // 関数ファイルの読み込み
 include('functions.php'); //function.php に置いている関数を呼び出す
-// ログイン状態のチェック
-checkSessionId();
 
 // getで送信されたidを取得
 $id = $_GET['id']; //送られてきたid番号
@@ -119,10 +117,10 @@ switch ($rs['parent']) {
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="index.php">お気に入り漫画登録</a>
+                <a class="nav-link" href="login.php">ログイン</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="select.php">お気に入り漫画一覧</a>
+                <a class="nav-link" href="select_nologin.php">お気に入り漫画一覧</a>
               </li>
             </ul>
           </div>
@@ -134,28 +132,28 @@ switch ($rs['parent']) {
       <form action="update.php" method="post">
         <div class="form-group">
           <label for="name">書籍名</label>
-          <input type="text" class="form-control" id="name" name="name" value="<?= $rs['name'] ?>">
+          <input type="text" class="form-control" id="name" name="name" value="<?= $rs['name'] ?>" disabled="disabled">
         </div>
         <div class="form-group">
           <label for="url">URL</label>
-          <input class="form-control" type="text" id="url" name="url" value="<?= $rs['url'] ?>">
+          <input class="form-control" type="text" id="url" name="url" value="<?= $rs['url'] ?>" disabled="disabled">
         </div>
         <div class="form-group">
           <label for="comment">感想</label>
-          <textarea class="form-control" id="comment" name="comment" rows="3"><?= $rs['comment'] ?></textarea>
+          <textarea class="form-control" id="comment" name="comment" rows="3" disabled="disabled"><?= $rs['comment'] ?></textarea>
         </div>
         <div class="form-group">
           <label for="genre">ジャンル</label>
           <input type="hidden" name="cur_genre">
-          <input type="checkbox" name="genre" value="ヒーロー" <?= $checked0 ?>>ヒーロー
-          <input type="checkbox" name="genre" value="ラブコメ" <?= $checked1 ?>>ラブコメ
-          <input type="checkbox" name="genre" value="ホラー" <?= $checked2 ?>>ホラー
-          <input type="checkbox" name="genre" value="学園" <?= $checked3 ?>>学園
-          <input type="checkbox" name="genre" value="冒険" <?= $checked4 ?>>冒険
+          <input type="checkbox" name="genre" value="ヒーロー" <?= $checked0 ?> disabled="disabled">ヒーロー
+          <input type="checkbox" name="genre" value="ラブコメ" <?= $checked1 ?> disabled="disabled">ラブコメ
+          <input type="checkbox" name="genre" value="ホラー" <?= $checked2 ?> disabled="disabled">ホラー
+          <input type="checkbox" name="genre" value="学園" <?= $checked3 ?> disabled="disabled">学園
+          <input type="checkbox" name="genre" value="冒険" <?= $checked4 ?> disabled="disabled">冒険
         </div>
         <div class=" form-group">
           <label for="parent">フォルダ</label>
-          <select id="parent" name="parent" value="<?= $rs['parent'] ?>">
+          <select id="parent" name="parent" value="<?= $rs['parent'] ?>" disabled="disabled">
             <option <?= $selected0 ?> value="殿堂入り">殿堂入り</option>
             <option <?= $selected1 ?> value="完結済み">完結済み</option>
             <option <?= $selected2 ?> value="連載中">連載中</option>
